@@ -3,10 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Trivado - Cadastro</title>
+    <title>Hotel Mon Amour - Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .input{
+            border: 1px solid #1E3A5F;
+            border-radius: 10px;
+            color: black;
+            padding: 8px;
+            margin-bottom: 19px;
+            margin-top: 3px;
+            background-color: darkturquoise;
+            color: blue;
+            width: 330px;
+            outline: invert;
+        }
+
+        input:focus{
+            outline-color: blue;
+            outline-width: 5px;
+        }
+        
+        .btn-enviar{
+            width: 100%;
+            margin-top: 30px;
+            border: 2px solid #1E3A5F;
+            border-radius: 200px;
+            padding: 15px;
+            width: 100%;
+            background-color: darkturquoise;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-enviar:hover{
+            
+            color: #2563EB;
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1 class="titulo_principal">Hotel Trivago</h1>
+    <h1 class="titulo_principal" style="color: blue; background-color: white; border: 5px solid darkblue; margin: auto; border-radius: 100px; width: 300px;">Hotel Mon Amour</h1>
+    <br>
     <h2 class="titulo_secundario">Cadastro de Cliente</h2>
     <form class="form" action="salvar_cliente.php" method="post">
         <label class="label" for="nome">Nome Completo</label><br>
@@ -14,10 +54,10 @@
         <label class="label" for="email">Email</label><br>
         <input class="input" type="email" id="email" name="email" placeholder="seuemail@email.com.br"><br>
         <label class="label" for="tel">Telefone</label><br>
-        <input class="input" type="text" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx"><br>
+        <input class="input" type="text" id="tel" name="tel" placeholder="(xx) xxxxx-xxxx"><br>
         <label class="label" for="senha">Senha</label><br>
         <input class="input" type="password" id="senha" name="senha" placeholder="Sua Senha"><br><br>
-        <button class="btn_enviar">ENVIAR</button>
+        <button class="btn-enviar">SALVAR</button>
     </form>
 </body>
 </html>

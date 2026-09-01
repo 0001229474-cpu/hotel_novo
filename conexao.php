@@ -12,10 +12,4 @@ if($conexao){
 } else{
     echo "nao conectou ao banco de dados";
 }
-
-
-
-
-
-
 ?>
