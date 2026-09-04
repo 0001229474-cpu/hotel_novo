@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primavera</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #219653;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: rgb(47, 0, 255);">Reservas de Cliente</h1>
+    <h2>Cadastro Cliente</h2>
+
+    <form class="form" action="salvar_cliente.php" method="POST">
+        <label class="label" for="nome">Nome Completo</label>
+        <input class="input" type="text" id="nome" name="nome" placeholder="Digite seu Nome">
+        
+        <label class="label" for="email">E-mail</label>
+        <input class="input" type="email" id="email" name="email" placeholder="Digite seu E-mail">
+
+        <label class="label" for="telefone">Telefone</label>
+        <input class="input" type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
+
+        <label class="label" for="senha">Senha</label>
+        <input class="input" type="password" id="senha" name="senha" placeholder="Digite sua senha">
+        
+        <button type="submit">ENVIAR CADASTRO</button>
+    </form>
+</body>
+</html>
