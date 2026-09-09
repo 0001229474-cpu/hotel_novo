@@ -1,5 +1,5 @@
  <?php
- include_start();
+ include "conecao.php"s;
  
 $email = $_POST['email'];
 $senha = $_POST['senha'];
@@ -20,4 +20,7 @@ else{
     acho"<br><a hret='login.html'>Voltar</a>";
 }
 else{
-    acho"E-mail nao encontrado!"
+    acho"E-mail nao encontrado!";
+    acho"
+
+    ?>
