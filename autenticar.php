@@ -4,13 +4,14 @@
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$sql = "SELECT * FROM clientes WHERE email = '$email';
-$resultado = mysqli_query
-($conexao,$sql);
+$sql = "SELECT * FROM clientes WHERE email = '$email' and senha = '$senha'";
+
+$resultado mysqli_query($conexao,$sql);
+
 
 if(mysqli_num_rows($resultado) > 0){
 $cliente = mysqli_fetch_assoc($resultado);
-
+}
 if($senha == $cliente["senha"]){
 $resultado = ["email"] = $email;
 header("localion:minhas_recervas.php");}
@@ -22,5 +23,5 @@ else{
 else{
     acho"E-mail nao encontrado!";
     acho"
-
+}
     ?>
