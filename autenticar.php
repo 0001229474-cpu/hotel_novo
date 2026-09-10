@@ -1,5 +1,5 @@
  <?php
- include "conecao.php"s;
+ require_once "conecao.php";
  
 $email = $_POST['email'];
 $senha = $_POST['senha'];
@@ -10,18 +10,10 @@ $resultado mysqli_query($conexao,$sql);
 
 
 if(mysqli_num_rows($resultado) > 0){
-$cliente = mysqli_fetch_assoc($resultado);
+ header("location:minhas_reservas.php");
+ exit();
+}else {
+    header("location: login.html");
+    exit;
 }
-if($senha == $cliente["senha"]){
-$resultado = ["email"] = $email;
-header("localion:minhas_recervas.php");}
-
-else{
-    acho"senha errada!";
-    acho"<br><a hret='login.html'>Voltar</a>";
-}
-else{
-    acho"E-mail nao encontrado!";
-    acho"
-}
-    ?>
+ ?>

@@ -1,7 +1,7 @@
 <?php
 
-<<<<<<< HEAD
-require_once 'conexao.php';
+
+require_once "conecao.php";
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
@@ -17,8 +17,6 @@ if(mysqli_query($conexao,$sql)){
     echo "<br>Error 404";
 }
 
-?>
-=======
 require_once "conexao.php";
 
 $nome = $_POST['nome'];
@@ -36,4 +34,4 @@ if (mysqli_query($conexao, $sql)) {
 }
 
 ?>
->>>>>>> 9999289995521070f0d711fe464433e213a0a7fb
+
