@@ -4,28 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Hotel</title>
+
+    <link rel="stylessheet" href="css/style.css">
+
+    <style>
+    form {
+        width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    input{
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+    button{
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border:  none;
+        cursor: pointer;
+    }
+
+    </style>
+
 </head>
 <body>
-    <h1>Hotel.Luxo</h1>
-    <h2>Cadastro de Hotel</h2>
+    <h1 style="text-align: center;color: #6f42c1;">Hotel.Luxo</h1>
+    <h2  style="text-align: center;color: #6f42c1;">Cadastro de Hotel</h2>
 
     <form action="salvar_hotel.php" method="post">
 
     <label>Nome do Hotel:</label>
-    <input type="text" name="nome_hotel" required>
+    <input type="text" name="text" placeholder="Digite seu Hotel" required>
     <br><br>
 
     <label>Cidade:</label>
-    <input type="text" name="cidade" required>
+    <input type="text"  name="cidade" placeholder="Digite sua Cidade"  required>
     <br><br>
 
     <label>Classificação em Estrelas:</label>
-    <input type="number" name="escrelas" min="1" max="5" required>
+    <input type="number" name="escrelas" min="1" max="5" placeholder="Escrelas">
     <br><br>
 
     <button type="submit">Cadastro finalizado</button>
     </form>
-
-    <a href="inde.html">Valtar para a página principal</a>
+     <BR><BR>
+    <a href="index.html">Valtar para a página principal</a>
 </body>
 </html>
