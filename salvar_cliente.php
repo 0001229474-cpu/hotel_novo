@@ -1,11 +1,11 @@
 <?php
 
 
-require_once "conecao.php";
+ require_once "conexao.php";
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
-$telefone = $_POST['tel'];
+$telefone = $_POST['telefone'];
 $senha = $_POST['senha'];
 
 $sql = "INSERT INTO clientes (nome, email, telefone, senha)
