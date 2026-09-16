@@ -37,16 +37,22 @@
     <form action="salvar_hotel.php" method="post">
 
     <label>Nome do Hotel:</label>
-    <input type="text" name="text" placeholder="Digite seu Hotel" required>
+    <input type="text" name="nome" id="nome" placeholder="Digite seu Hotel" required>
     <br><br>
 
     <label>Cidade:</label>
-    <input type="text"  name="cidade" placeholder="Digite sua Cidade"  required>
+    <input type="text"  name="cidade" id="cidade"   placeholder=" Digite sua Cidade " required>
     <br><br>
 
     <label>Classificação em Estrelas:</label>
-    <input type="number" name="escrelas" min="1" max="5" placeholder="Escrelas">
+    <input type="number" name="escrelas"  id="estrelas" min="1" max="5" placeholder="Escrelas">
     <br><br>
+
+     <label for="">Email</label>
+    <input type="email" name="email" id="email" placeholder="digite o email">
+    <br><br>
+    <label for="">Senha</label>
+    <input type="senha" name="senha" id="senha" placeholder="digite a senha">
 
     <button type="submit">Cadastro finalizado</button>
     </form>
