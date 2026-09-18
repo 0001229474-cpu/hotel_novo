@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Hotel</title>
+    <title> Acesso do Hotel/Parcero</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
-
 <body>
-    
+ <div class="login-container">
+       
+        <h1>Acesso do Hotel / Parceiro</h1>
+
+        <form action="autenticar_hotel.php" method="POST">
+            <div class="input-group">
+                <label for="email">E-mail do Hotel</label>
+                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+            </div>
+             <br>
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required placeholder="Sua senha">
+            </div>
+             <br>
+            <button type="submit" class="btn-acessar">Acessar Painel do Hotel</button>
+        </form>
+
+        <p class="link-cadastro">
+            Novo parceiro? <a href="cadastro_hotel.html">Cadastre-se aqui</a>
+        </p>
+    </div>
 </body>
-</html>    
+</html>
+    
+
+ 
