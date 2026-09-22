@@ -3,69 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Mon Amour - Cadastro</title>
+    <title>Primavera</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .input{
-            border: 1px solid #1E3A5F;
-            border-radius: 10px;
-            color: black;
+        .input {
+            width: 100%;
             padding: 8px;
-            margin-bottom: 19px;
-            margin-top: 3px;
-            background-color: #fff;
-            color: #1a2332;
-            width: 330px;
-            outline: invert;
-            
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
 
-        input:placeholder{
-            color: #8a94a6;
-        }
-
-        input:focus{
-            outline: none;
-            border-color: #1e3a8a;
-            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
-        }
-        
-        .btn-enviar{
+        button {
             width: 100%;
-            margin-top: 30px;
-            border: none;
-            border-radius: 3px;
-            padding: 15px;
-            width: 100%;
-            background-color: #1e3a8a;
+            padding: 10px;
+            background-color: #000000;
             color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
             cursor: pointer;
-            font-weight: bold;
         }
 
-        .btn-enviar:hover{
-            
-            color: #fff;
-            background-color: rgb(11, 167, 11);
+        button:hover {
+            background-color: #219653;
         }
     </style>
 </head>
 <body>
-    <h1 class="titulo_principal" style="color: blue; background-color: black; border: 2px solid darkblue; margin: auto; border-radius: 5px; width: 400px;">Hotel <span style="color: red;">Mon</span> <span style="color: yellow;">Amour</span></h1>
-    <br>
-    <h2 class="titulo_secundario" style="text-decoration: underline;">Cadastro de Cliente</h2>
-    <form class="form" action="salvar_cliente.php" method="post">
-        <label class="label" for="nome">Nome Completo</label><br>
-        <input class="input" type="text" id="nome" name="nome" placeholder="Seu Nome" required><br>
-        <label class="label" for="email">Email</label><br>
-        <input class="input" type="email" id="email" name="email" placeholder="seuemail@email.com.br" required><br>
-        <label class="label" for="tel">Telefone</label><br>
-        <input class="input" type="text" id="tel" name="tel" placeholder="(xx) xxxxx-xxxx" required><br>
-        <label class="label" for="senha">Senha</label><br>
-        <input class="input" type="password" id="senha" name="senha" placeholder="Sua Senha" required><br><br>
-        <button class="btn-enviar">SALVAR</button>
+    <h1 style="color: rgb(47, 0, 255);">Reservas de Cliente</h1>
+    <h2>Cadastro Cliente</h2>
+
+    <form class="form" action="salvar_cliente.php" method="POST">
+        <label class="label" for="nome">Nome Completo</label>
+        <input class="input" type="text" id="nome" name="nome" placeholder="Digite seu Nome">
+        
+        <label class="label" for="email">E-mail</label>
+        <input class="input" type="email" id="email" name="email" placeholder="Digite seu E-mail">
+
+        <label class="label" for="telefone">Telefone</label>
+        <input class="input" type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
+
+        <label class="label" for="senha">Senha</label>
+        <input class="input" type="password" id="senha" name="senha" placeholder="Digite sua senha">
+        
+        <button type="submit">ENVIAR CADASTRO</button>
     </form>
-    <br><br>
-    <a href="login.html">LOGIN</a>
 </body>
 </html>

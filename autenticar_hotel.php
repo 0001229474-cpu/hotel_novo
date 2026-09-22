@@ -13,7 +13,7 @@ if(mysqli_num_rows($resultado) > 0){
  header("location:minhas_reservas.php");
  exit();
 }else {
-    header("location: login.html");
+    header("location:salvar_hotel.php");
     exit;
 }
  ?>
