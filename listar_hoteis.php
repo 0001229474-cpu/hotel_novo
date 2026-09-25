@@ -3,7 +3,7 @@
  require_once "conexao.php";
 
  |$sql = "SELECT * FROM hoteis";
- mysqli_query($conexao,$sql);
+ $resultado = mysqli_query($conexao,$sql);
 
 ?>
 
@@ -26,14 +26,13 @@
         <?php
         while($linha = mysqli_fetch_assoc($resultado)){
             echo"
-            <tr>
-            <td>".$linha['nome']."</td>
-            <td>".$linha['cidade']."</td>
-            <td>".$linha['estrelas']."</td>
-            <td><a href="ver_quartos.php?id_hotel=".$linha['id']."'> ver quartos </a></td>
-
-        </tr>
-        ";}
+               <tr>
+                  <td>".$linha['nome']."</td>
+                  <td>".$linha['cidade']."</td>
+                  <td>".$linha['estrelas']."</td>
+                  <td><a href='ver_quartos.php?id_hotel=".$linha['id']."'> ver quartos </a></td>
+               </tr>
+            ";}
         ?>
         
     </table>
