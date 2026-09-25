@@ -3,7 +3,7 @@
 
 $id_hotel = $_GET['id_hotel'];
 
-$sql = "SELECT * FROM quartos WHERE id_hotel = '$id_hotel'and ";
+$sql = "SELECT * FROM quartos WHERE id_hotel = '$id_hotel'and disponivel = 1 ";
 $resultado = mysqli_query($conexao,$sql);
 
 ?>
@@ -16,6 +16,7 @@ $resultado = mysqli_query($conexao,$sql);
     <title> Quarto Disponível</title>
 </head>
 <body>
+
     <h2>Quartos Disponíveis no Hotel Selecionado</h2>
     <table>
         <tr>
@@ -35,7 +36,20 @@ $resultado = mysqli_query($conexao,$sql);
 
     <form action="salvar_reserva.php" method="post">
         <label for="id_cliente">ID do Cliente</label>
-        <input type="number" id="id_cliente" name="id_cliente"
+        <input type="number" id="id_cliente" name="id_cliente">
+        <br><br>  
+        <label for="id_cliente">ID do Quarto</label>
+        <input type="number" id="id_quarto" name="id_quarto">
+        <br><br>
+        <label for="id_cliente">Data de Entrada</label>
+        <input type="date " id="data_entrada" name="date_entrada">
+        <br><br>
+        <label for="id_cliente">Data de Saída</label>
+        <input type="date" id="data_saida" name="data_saida">
+        <br><br>
+
+        <button class="button_ver_quartos">CONFIRMAR RESERVA</B></button>
+        
 </form>
 </body>
 </html>
