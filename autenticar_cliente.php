@@ -4,6 +4,8 @@
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
+$senha_organizada = password_verify($senha);
+
 $sql = "SELECT * FROM clientes WHERE email = '$email' and senha = '$senha'";
 
 $resultado mysqli_query($conexao,$sql);

@@ -10,8 +10,10 @@ $resultado mysqli_query($conexao,$sql);
 
 
 if(mysqli_num_rows($resultado) > 0){
+    while($linha = mysqli_fetch_assoc($resultado)){
  header("location:minhas_reservas.php");
  exit();
+    }
 }else {
     header("location:salvar_hotel.php");
     exit;
