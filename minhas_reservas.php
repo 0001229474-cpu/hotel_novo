@@ -1,4 +1,10 @@
 <?php
+session_start();
+if(!sset($_SESSION['logado']) || $_SESSION['logado']!== true){
+    header ("location: login.php");
+    exit();
+}
+
 require_once "conexao.php";
 
 $sql = "SELECT 
